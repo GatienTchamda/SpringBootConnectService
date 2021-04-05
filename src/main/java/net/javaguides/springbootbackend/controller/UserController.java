@@ -1,4 +1,5 @@
 package net.javaguides.springbootbackend.controller;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class UserController {
     private UserRepository userRepository; 
 
     @GetMapping("users")
-    public List<User> getUsers(){
+    public List <User> getUsers(){
         return this.userRepository.findAll();
     } 
 }
